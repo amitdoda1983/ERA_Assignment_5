@@ -13,25 +13,9 @@ This repo has 3 files :
 ## utils.py
 - Data Transformation : There are 2 transformations one each for train and test set. train_transforms & test_transforms
 - train_transforms apply center cropping, resizing & roatation followed by standardization to the training data.This is data augmentation and helps in training on varied data set which is uuseful for training.
-
-train_transforms = 
-
-transforms.Compose([
-    transforms.RandomApply([transforms.CenterCrop(22), ], p=0.1),
-    transforms.Resize((28, 28)),
-    transforms.RandomRotation((-15., 15.), fill=0),
-    transforms.ToTensor(),
-    transforms.Normalize((0.1307,), (0.3081,)),
-    ])
-
-   
+ 
 - test_transforms apply normalization & standardization to the test data.This is done to bring the test data to same scale as of train data.
-
-test_transforms = transforms.Compose([
-    transforms.ToTensor(),
-    transforms.Normalize((0.1307,), (0.3081,))
-    ])
-    
+   
     
 ## model.py
 - This file has class named Net2. This is network class which has network layer definition and forward funtion that defines the network.
