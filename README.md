@@ -44,12 +44,9 @@ class Net2(nn.Module):
         x = self.fc2(x)
         return F.log_softmax(x, dim=1)
         
+        
+   ![image](https://github.com/amitdoda1983/ERA_Assignment_5/assets/37932202/f571d7de-3500-4ccb-80f9-97cf123ac922)
+
 ## S5.ipynb
 - Deep Learning: [Recent Trends in Deep Learning Based Natural Language Processing (2018)](https://arxiv.org/pdf/1708.02709.pdf)
-- Classification: [Deep Learning Based Text Classification: A Comprehensive Review (2021)](https://arxiv.org/pdf/2004.03705)
-- Generation: [Survey of the SOTA in Natural Language Generation: Core tasks, applications and evaluation (2018)](https://www.jair.org/index.php/jair/article/view/11173/26378)
-- Generation: [Neural Language Generation: Formulation, Methods, and Evaluation (2020)](https://arxiv.org/pdf/2007.15780.pdf)
-- Transfer learning: [Exploring Transfer Learning with T5: the Text-To-Text Transfer Transformer (2020)](https://arxiv.org/abs/1910.10683)
-- Transformers: [Efficient Transformers: A Survey (2020)](https://arxiv.org/pdf/2009.06732.pdf)
-- Metrics: [Beyond Accuracy: Behavioral Testing of NLP Models with CheckList (2020)](https://arxiv.org/pdf/2005.04118.pdf)
-- Metrics: [Evaluation of Text Generation: A Survey (2020)](https://arxiv.org/pdf/2006.14799.pdf)
+
