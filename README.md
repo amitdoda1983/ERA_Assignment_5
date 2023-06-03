@@ -6,9 +6,9 @@ This repo has 3 files :
 
 **Table of Contents**
 
-- [utils.py](utils.py)
-- [model.py](#model.py)
-- [S5.ipynb](#S5.ipynb)
+- [utils.py](utils)
+- [model.py](#model)
+- [S5.ipynb](#S5)
 
 ## utils.py
 - Data Transformation : There are 2 transformations one each for train and test set. train_transforms & test_transforms
