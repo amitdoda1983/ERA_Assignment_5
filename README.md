@@ -14,7 +14,9 @@ This repo has 3 files :
 - Data Transformation : There are 2 transformations one each for train and test set. train_transforms & test_transforms
 - train_transforms apply center cropping, resizing & roatation followed by standardization to the training data.This is data augmentation and helps in training on varied data set which is uuseful for training.
 
-train_transforms = transforms.Compose([
+train_transforms = 
+
+transforms.Compose([
     transforms.RandomApply([transforms.CenterCrop(22), ], p=0.1),
     transforms.Resize((28, 28)),
     transforms.RandomRotation((-15., 15.), fill=0),
