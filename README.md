@@ -11,21 +11,34 @@ This repo has 3 files :
 - [S5.ipynb](#S5.ipynb)
 
 ## utils.py
-- Algorithms: [Recommender systems survey (2013)](http://irntez.ir/wp-content/uploads/2016/12/sciencedirec.pdf)
-- Algorithms: [Deep Learning based Recommender System: A Survey and New Perspectives (2019)](https://arxiv.org/pdf/1707.07435.pdf)
-- Algorithms: [Are We Really Making Progress? An Analysis of Neural Recommendation Approaches (2019)](https://arxiv.org/pdf/1907.06902.pdf)
-- Serendipity: [A Survey of Serendipity in Recommender Systems (2016)](https://www.researchgate.net/publication/306075233_A_Survey_of_Serendipity_in_Recommender_Systems)
-- Diversity: [Diversity in Recommender Systems – A survey (2017)](https://papers-gamma.link/static/memory/pdfs/153-Kunaver_Diversity_in_Recommender_Systems_2017.pdf)
-- Explanations: [A Survey of Explanations in Recommender Systems (2007)](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.418.9237&rep=rep1&type=pdf)
+- Data Transformation : There are 2 transformations one each for train and test set. train_transforms & test_transforms
+- train_transforms apply center cropping, resizing & roatation followed by standardization to the training data.This is data augmentation and helps in training on varied data set which is uuseful for training.
+- test_transforms apply normalization & standardization to the test data.This is done to bring the test data to same scale as of train data.
 
 ## model.py
-- Architecture: [A State-of-the-Art Survey on Deep Learning Theory and Architectures (2019)](https://www.mdpi.com/2079-9292/8/3/292/htm)
-- Knowledge distillation: [Knowledge Distillation: A Survey (2021)](https://arxiv.org/pdf/2006.05525.pdf)
-- Model compression: [Compression of Deep Learning Models for Text: A Survey (2020)](https://arxiv.org/pdf/2008.05221.pdf)
-- Transfer learning: [A Survey on Deep Transfer Learning (2018)](https://arxiv.org/pdf/1808.01974.pdf)
-- Neural architecture search: [A Comprehensive Survey of Neural Architecture Search (2021)](https://arxiv.org/abs/2006.02903)
-- Neural architecture search: [Neural Architecture Search: A Survey (2019)](https://arxiv.org/abs/1808.05377)
+- This file has class named Net2. This is network class which has network layer definition and forward funtion that defines the network.
 
+class Net2(nn.Module):
+    #This defines the structure of the NN.
+    def __init__(self):
+        super(Net2, self).__init__()
+        self.conv1 = nn.Conv2d(1, 32, kernel_size=3, bias=False)
+        self.conv2 = nn.Conv2d(32, 64, kernel_size=3, bias=False)
+        self.conv3 = nn.Conv2d(64, 128, kernel_size=3, bias=False)
+        self.conv4 = nn.Conv2d(128, 256, kernel_size=3, bias=False)
+        self.fc1 = nn.Linear(4096, 50, bias=False)
+        self.fc2 = nn.Linear(50, 10, bias=False)
+
+    def forward(self, x):
+        x = F.relu(self.conv1(x), 2) # 28>26 | 1>3 | 1>1
+        x = F.relu(F.max_pool2d(self.conv2(x), 2)) #26>24>12 | 3>5>6 | 1>1>2
+        x = F.relu(self.conv3(x), 2) # 12>10 | 6>10 | 2>2
+        x = F.relu(F.max_pool2d(self.conv4(x), 2)) # 10>8>4 | 10>14>16 | 2>2>4
+        x = x.view(-1, 4096) # 4*4*256 = 4096
+        x = F.relu(self.fc1(x))
+        x = self.fc2(x)
+        return F.log_softmax(x, dim=1)
+        
 ## S5.ipynb
 - Deep Learning: [Recent Trends in Deep Learning Based Natural Language Processing (2018)](https://arxiv.org/pdf/1708.02709.pdf)
 - Classification: [Deep Learning Based Text Classification: A Comprehensive Review (2021)](https://arxiv.org/pdf/2004.03705)
