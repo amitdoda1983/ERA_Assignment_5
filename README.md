@@ -16,6 +16,10 @@ This repo has 3 files :
  
 - test_transforms apply normalization & standardization to the test data.This is done to bring the test data to same scale as of train data.
    
+   Below is a subset of train data
+   
+   ![image](https://github.com/amitdoda1983/ERA_Assignment_5/assets/37932202/49a80c4e-a1c1-4b7e-8ad8-c9a968485448)
+
     
 ## model.py
 - This file has class named Net2. This is network class which has network layer definition and forward funtion that defines the network.
