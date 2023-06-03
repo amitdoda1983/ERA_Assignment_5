@@ -6,7 +6,7 @@ This repo has 3 files :
 
 **Table of Contents**
 
-- [utils.py](#utils.py)
+- [utils.py](utils.py)
 - [model.py](#model.py)
 - [S5.ipynb](#S5.ipynb)
 
