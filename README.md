@@ -49,7 +49,7 @@ class Net2(nn.Module):
         return F.log_softmax(x, dim=1)
         
    
-## S5.ipynb
+## S5
 - This is the jupyter notebook which loads train and test data and trains the custom CNN Net2 model.
 - Below is the model summary
 
