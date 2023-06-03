@@ -49,7 +49,7 @@ class Net2(nn.Module):
         return F.log_softmax(x, dim=1)
         
         
-   ![image](https://github.com/amitdoda1983/ERA_Assignment_5/assets/37932202/f571d7de-3500-4ccb-80f9-97cf123ac922)
+   
 
 ## S5.ipynb
 - Deep Learning: [Recent Trends in Deep Learning Based Natural Language Processing (2018)](https://arxiv.org/pdf/1708.02709.pdf)
