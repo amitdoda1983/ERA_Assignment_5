@@ -10,7 +10,7 @@ This repo has 3 files :
 - [model.py](#model)
 - [S5.ipynb](#S5)
 
-## utils.py
+## utils
 - Data Transformation : There are 2 transformations one each for train and test set. train_transforms & test_transforms
 - train_transforms apply center cropping, resizing & roatation followed by standardization to the training data.This is data augmentation and helps in training on varied data set which is uuseful for training.
  
@@ -21,7 +21,7 @@ This repo has 3 files :
    ![image](https://github.com/amitdoda1983/ERA_Assignment_5/assets/37932202/49a80c4e-a1c1-4b7e-8ad8-c9a968485448)
 
     
-## model.py
+## model
 - This file has class named Net2. This is network class which has network layer definition and forward funtion that defines the network.
 
 
