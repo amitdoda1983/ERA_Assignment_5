@@ -18,8 +18,10 @@ This repo has 3 files :
 ## model.py
 - This file has class named Net2. This is network class which has network layer definition and forward funtion that defines the network.
 
+
 class Net2(nn.Module):
     #This defines the structure of the NN.
+    
     def __init__(self):
         super(Net2, self).__init__()
         self.conv1 = nn.Conv2d(1, 32, kernel_size=3, bias=False)
@@ -28,6 +30,8 @@ class Net2(nn.Module):
         self.conv4 = nn.Conv2d(128, 256, kernel_size=3, bias=False)
         self.fc1 = nn.Linear(4096, 50, bias=False)
         self.fc2 = nn.Linear(50, 10, bias=False)
+    
+    
     def forward(self, x):
         x = F.relu(self.conv1(x), 2) # 28>26 | 1>3 | 1>1
         x = F.relu(F.max_pool2d(self.conv2(x), 2)) #26>24>12 | 3>5>6 | 1>1>2
