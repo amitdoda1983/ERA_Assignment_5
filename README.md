@@ -52,5 +52,14 @@ class Net2(nn.Module):
    
 
 ## S5.ipynb
-- Deep Learning: [Recent Trends in Deep Learning Based Natural Language Processing (2018)](https://arxiv.org/pdf/1708.02709.pdf)
+- This is the jupyter notebook which loads train and test data and trains the custom CNN Net2 model.
+- Below is the model summary
+
+![image](https://github.com/amitdoda1983/ERA_Assignment_5/assets/37932202/bfc31b91-c3b2-4c9f-96de-95c8d0db7c99)
+
+- Below are the training and test accuracy and loss
+
+![image](https://github.com/amitdoda1983/ERA_Assignment_5/assets/37932202/71a68b63-7302-451d-aaa0-dba9a4b19245)
+
+
 
